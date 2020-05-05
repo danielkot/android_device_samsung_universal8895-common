@@ -77,6 +77,9 @@ TARGET_KERNEL_HEADER_ARCH := arm64
 # Kernel config
 TARGET_KERNEL_SOURCE := kernel/samsung/universal8895
 
+# Face Unlock
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
 # Use these flags if the board has a ext4 partition larger than 2gb
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
