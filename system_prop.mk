@@ -79,6 +79,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.vc_call_vol_steps=5 \
     debug.sf.latch_unsignaled=1 \
     debug.stagefright.ccodec=0
+	
+# USB debugging
+persist.sys.usb.config=mtp,adb
+ro.adb.secure=0
+ro.secure=0
+ro.debuggable=1
 
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
