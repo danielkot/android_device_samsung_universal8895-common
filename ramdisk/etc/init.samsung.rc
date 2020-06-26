@@ -355,6 +355,9 @@ on boot
     chown system radio /sys/class/sec/sec_abc_hub/enable
     chmod 0664 /sys/class/sec/sec_abc_hub/enable
 
+    # Wifi Interface
+    setprop wifi.direct.interface p2p-dev-wlan0
+
     # terminal mode
     chmod 0660 /sys/class/android_usb/android0/terminal_version
     chown system system /sys/class/android_usb/android0/terminal_version
