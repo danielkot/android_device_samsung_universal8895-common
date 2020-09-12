@@ -117,6 +117,11 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.2-service \
     android.hardware.graphics.mapper@2.0-impl
 
+# HIDL
+PRODUCT_PACKAGES += \
+    libhwbinder \
+    libhwbinder.vendor
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.0-impl \
