@@ -81,6 +81,9 @@ TARGET_KERNEL_HEADER_ARCH := arm64
 # Kernel config
 TARGET_KERNEL_SOURCE := kernel/samsung/universal8895
 
+# Manifest
+DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/manifest.xml
+
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
