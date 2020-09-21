@@ -207,15 +207,8 @@ on post-fs-data
     write /data/misc/conn/.wificable.info E
     chown system root /data/misc/conn/.wificable.info
     chmod 0666 /data/misc/conn/.wificable.info
-    
-# [ SEC_PRODUCT_FEATURE_SECURITY_SUPPORT_FIVE
-    mkdir /data/misc/integrity 0775 vendor_audit system
-# ] SEC_PRODUCT_FEATURE_SECURITY_SUPPORT_FIVE
 	
 # [ SEC_SELINUX_PORTING_COMMON
-    mkdir /data/misc/audit 0775 system system
-    chown vendor_audit vendor_audit /data/misc/audit/audit.log
-    chown vendor_audit vendor_audit /data/misc/audit/audit.old
 
     # arcounter
     mkdir /data/misc/arcounter 0700 system system
@@ -234,9 +227,6 @@ on post-fs-data
 
     # Samsung Pay
     # mkdir /efs/pfw_data 0760 spay spay
-
-    # Linux On Dex
-    mkdir /data/lxd 0770 root vendor_lod
 
     # MST/NFC Switch
     # chown spay system /dev/mst_ctrl
@@ -285,11 +275,11 @@ on post-fs-data
     mkdir /data/app_fonts 0775 system system
 
 # [ SEC_SELINUX_PORTING_COMMON
-    restorecon --recursive --force /efs
-    restorecon --recursive --force /cpefs
-    restorecon --recursive --force /mnt/vendor/efs
-    restorecon --recursive --force /mnt/vendor/cpefs
-    restorecon --recursive --force /sec_efs
+    restorecon --recursive /efs
+    restorecon --recursive /cpefs
+    restorecon --recursive /mnt/vendor/efs
+    restorecon --recursive /mnt/vendor/cpefs
+    restorecon --recursive /sec_efs
     restorecon_recursive /carrier
     restorecon /sys/kernel/debug/tracing/trace_marker
 # ] SEC_SELINUX_PORTING_COMMON

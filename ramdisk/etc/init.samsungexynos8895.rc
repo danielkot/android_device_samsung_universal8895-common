@@ -136,13 +136,6 @@ on post-fs-data
     chmod 0755 /sys/kernel/debug/tracing
     restorecon /sys/kernel/debug/tracing/trace_marker
 
-# Samsung Pay
-    mkdir /efs/pfw_data 0760 spay spay    
-
-# MST/NFC Switch
-    chown spay system /dev/mst_ctrl
-    chmod 0660 /dev/mst_ctrl
-
 # for WIFI MAC address
     mkdir /efs/wifi 0775 wifi root
     chown wifi root /efs/wifi/.mac.info
