@@ -152,8 +152,11 @@ WIFI_HIDL_FEATURE_DISABLE_AP_MAC_RANDOMIZATION := true
 # MACLOADER
 BOARD_HAVE_SAMSUNG_WIFI          := true
 
+# Sepolicy
 BOARD_SEPOLICY_DIRS += device/samsung/universal8895-common/sepolicy
 BOARD_SEPOLICY_VERS := $(PLATFORM_SDK_VERSION).0
+# We modify several neverallows, so let the build proceed
+SELINUX_IGNORE_NEVERALLOWS := true
 
 # Shims
 TARGET_LD_SHIM_LIBS += \
