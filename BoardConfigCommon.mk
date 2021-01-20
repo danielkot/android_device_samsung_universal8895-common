@@ -150,7 +150,7 @@ WIFI_HIDL_FEATURE_DISABLE_AP_MAC_RANDOMIZATION := true
 BOARD_HAVE_SAMSUNG_WIFI          := true
 
 # Sepolicy
-include device/arrow/sepolicy/exynos/sepolicy.mk
+include device/lineage/sepolicy/exynos/sepolicy.mk
 
 BOARD_SEPOLICY_TEE_FLAVOR        := mobicore
 include device/samsung_slsi/sepolicy/sepolicy.mk
@@ -168,3 +168,9 @@ TARGET_LD_SHIM_LIBS += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
+
+# HIDL
+PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true
+
+# HIDL Manifest
+DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/manifest.xml

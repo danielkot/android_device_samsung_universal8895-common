@@ -84,8 +84,9 @@ PRODUCT_COPY_FILES += \
 
 # Configstore
 PRODUCT_PACKAGES += \
-    android.hardware.configstore@1.0-impl \
-    android.hardware.configstore@1.0-service
+    android.hardware.configstore@1.1-impl \
+    android.hardware.configstore@1.1-service \
+    vndservicemanager
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -94,7 +95,7 @@ PRODUCT_PACKAGES += \
     libfwdlockengine \
     libdrmclearkeyplugin \
     android.hardware.drm@1.0-service \
-    android.hardware.drm@1.2-service.clearkey \
+    android.hardware.drm@1.3-service.clearkey \
     android.hardware.drm@1.0-impl
 
 # Fingerprint
@@ -119,6 +120,8 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
+    libhidltransport \
+    libhidltransport.vendor \
     libhwbinder \
     libhwbinder.vendor
 
