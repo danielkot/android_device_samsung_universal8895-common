@@ -141,7 +141,7 @@
 
 
 # Lineage hals
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@[0-9]\.[0-9]-service\.universal8895         u:object_r:hal_lineage_livedisplay_sysfs_exec:s0
+#/(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@[0-9]\.[0-9]-service\.universal8895         u:object_r:hal_lineage_livedisplay_sysfs_exec:s0
 
 ### VENDOR
 /(vendor|system/vendor)/bin/vendor\.samsung\.hardware\.security\.widevine\.keyprovisioning@[0-9]\.[0-9]-service    u:object_r:hal_drm_widevine_exec:s0
