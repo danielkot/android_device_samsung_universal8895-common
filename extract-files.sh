@@ -59,6 +59,14 @@ if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
 
+function blob_fixup() {
+    case "${1}" in
+        system/vendor/lib64/libsec-ril.so | system/vendor/lib/libsec-ril.so | system/vendor/lib/libsec-ril-dsds.so | system/vendor/lib64/libsec-ril-dsds.so)
+            patchelf --replace-needed libcutils.so libcutils-v29.so "${2}"
+            ;;
+    esac
+}
+
 # Initialize the helper
 setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${ARROW_ROOT}" true "${CLEAN_VENDOR}"
 

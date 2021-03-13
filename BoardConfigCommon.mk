@@ -164,10 +164,10 @@ SELINUX_IGNORE_NEVERALLOWS := true
 TARGET_LD_SHIM_LIBS += \
     /system/lib/libexynoscamera.so|/vendor/lib/libexynoscamera_shim.so \
     /system/lib64/libexynoscamera.so|/vendor/lib64/libexynoscamera_shim.so \
-    /system/lib/libsec-ril-dsds.so|/vendor/lib/libcutils_shim.so \
-    /system/lib/libsec-ril.so|/vendor/lib/libcutils_shim.so \
-    /system/lib64/libsec-ril-dsds.so|/vendor/lib64/libcutils_shim.so \
-    /system/lib64/libsec-ril.so|/vendor/lib64/libcutils_shim.so
+    /system/vendor/lib/libsec-ril-dsds.so|/vendor/lib/libcutils-v29.so \
+    /system/vendor/lib/libsec-ril.so|/vendor/lib/libcutils-v29.so \
+    /system/vendor/lib64/libsec-ril-dsds.so|/vendor/lib64/libcutils-v29.so \
+    /system/vendor/lib64/libsec-ril.so|/vendor/lib64/libcutils-v29.so
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
